@@ -1,0 +1,37 @@
+.col-form-label {
+    text-transform: uppercase !important;
+    font-weight: 700;
+}
+
+#edit-color {
+    text-transform: uppercase !important;
+    font-weight: 700;
+}
+
+.table-dark {
+    text-transform: uppercase !important;
+}
+
+.box-shadow-table {
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+.card-add {
+    box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+.date-color {
+    color: green;
+}
+
+.status-color {
+    color: rgb(255, 68, 0);
+}
+
+.progress-color {
+    color: blue;
+}
+
+.size-color {
+    color: purple;
+}

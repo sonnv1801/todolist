@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-8">
+                        <h4 class="font-weight-bold">Tất Cả Danh Sách Công Việc</h4>
+                    </div>
+                    <div class="col-4">
+                        <a href="/add" class="btn btn-success float-right"><i class="fa fa-plus mr-1"></i>Thêm Công
+                            Việc</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <table class="table table-hover box-shadow-table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">title</th>
+                            <th scope="col">date</th>
+                            <th scope="col">status</th>
+                            <th scope="col">progress</th>
+                            <th scope="col">size</th>
+                            <th scope="col">action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if(todolists.length> 0) { %> <% for(let todolist of todolists) { %>
+                                <tr>
+                                    <th scope="row">
+                                        <%= todolist.title %>
+                                    </th>
+                                    <td class="date-color">
+                                        <%= todolist.date %>
+                                    </td>
+                                    <td class="status-color">
+                                        <%= todolist.status %>
+                                    </td>
+                                    <td class="progress-color">
+                                        <%= todolist.progress %>
+                                    </td>
+                                    <td class="size-color">
+                                        <%= todolist.size %>
+                                    </td>
+                                    <td>
+                                        <a href="/update/<%= todolist._id %>" class="btn btn-sm btn-warning"><i
+                                                class="fa fa-edit"></i></a>
+                                        <a href="/delete/<%= todolist._id %>" class="btn btn-sm btn-danger"><i
+                                                class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <% } %>
+                                    <% } else { %>
+                                        <div class="alert alert-warning d-flex align-items-center" role="alert">
+                                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                                aria-label="Warning:">
+                                                <use xlink:href="#exclamation-triangle-fill" />
+                                            </svg>
+                                            <div>
+                                                Chưa Có Công Việc! Thêm Mới Công Việc Nào.
+                                            </div>
+                                        </div>
+                                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

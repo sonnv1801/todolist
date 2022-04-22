@@ -1,0 +1,54 @@
+<div class="card">
+    <div class="card-header">
+        <h4 class="font-weight-bold">Cập Nhập Công Việc</h4>
+    </div>
+    <div class="card-body">
+        <form action="/update/<%= todolist._id %>" method="post">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label"
+                            style="  text-transform: uppercase !important; font-weight: 700;">Tên Công Việc</label>
+                        <input type="text" class="form-control" name="title" value="<%= todolist.title %>"
+                            placeholder="Nhập Tên Công Việc..." id="title">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label"
+                            style="  text-transform: uppercase !important; font-weight: 700;">Ngày Tạo</label>
+                        <input type="date" class="form-control" name="date" value="<%= todolist.date %>" id="date">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label"
+                            style="  text-transform: uppercase !important; font-weight: 700;">Trạng Thái</label>
+                        <input type="text" class="form-control" name="status" value="<%= todolist.status %>"
+                            placeholder="Hoàn Thành, Chưa Hoàn Thành,..." id="status">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label"
+                            style="  text-transform: uppercase !important; font-weight: 700;">Tiến Độ</label>
+                        <input type="text" class="form-control" placeholder="100%, 80%, 70%,..." name="progress"
+                            value="<%= todolist.progress %>" id="progress">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label"
+                            style="  text-transform: uppercase !important; font-weight: 700;">Độ Lớn Công Việc</label>
+                        <input type="text" class="form-control" name="size" value="<%= todolist.size %>"
+                            placeholder="Nhỏ, Trung Bình, Lớn,...." id="size">
+                    </div>
+                </div>
+            </div>
+            <div class="" style="margin-top: 2rem;">
+                <button type="submit" class="btn btn-success">Submit</button>
+                <a href="/" class="btn btn-light">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

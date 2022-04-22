@@ -1,0 +1,50 @@
+
+
+<div class="card card-add">
+    <div class="card-header">
+        <h4 class="font-weight-bold">Thêm Mới Công Việc</h4>
+    </div>
+    <div class="card-body">
+        <form action="/add" method="post">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label">Tên Công Việc</label>
+                        <input type="text" class="form-control" name="title" placeholder="Nhập Tên Công Việc..."
+                            id="title">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label">Ngày Tạo</label>
+                        <input type="date" class="form-control" name="date" id="date">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label">Trạng Thái</label>
+                        <input type="text" class="form-control" name="status" placeholder="Hoàn Thành, Chưa Hoàn Thành,..." id="status">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label">Tiến Độ</label>
+                        <input type="text" class="form-control" placeholder="100%, 80%, 70%,..." name="progress"
+                            id="progress">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label">Độ Lớn Công Việc</label>
+                        <input type="text" class="form-control" name="size" placeholder="Nhỏ, Trung Bình, Lớn,...."
+                            id="size">
+                    </div>
+                </div>
+            </div>
+            <div class="" style="margin-top: 2rem;">
+                <button type="submit" class="btn btn-success">Submit</button>
+                <a href="/" class="btn btn-light">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
